@@ -14,5 +14,7 @@ typedef struct s_stack
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
 void	ft_swap(long *a, long *b);
+t_stack	*new_element(int nbr);
+
 
 #endif

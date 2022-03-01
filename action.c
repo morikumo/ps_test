@@ -14,3 +14,14 @@ t_stack *swap_a(t_stack *stack_a)
     return (stack_a);
 }
 
+/**
+ * @brief va 
+ * 
+ * @param stack_a 
+ * @param stack_b 
+ * @return t_stack* 
+ */
+t_stack *push_a(t_stack *stack_a, t_stack *stack_b)
+{
+    if(new_element())
+}
