@@ -43,7 +43,7 @@ void	ft_swap(long *a, long *b)
 }
 
 /**
- * @brief Nous donne la taille de la liste
+ * @brief Nous donne la taille de la liste. Equivalent de lstsize.
  * 
  * @param stack_a 
  * @return int 

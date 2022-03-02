@@ -28,7 +28,7 @@ t_stack *push_a(t_stack *stack_a, t_stack *stack_b)
     else
         stack_a = ft_stack_front(stack_a, stack_b->nbr);
     ft_putstr("PA\n");
-    return (stack_a)
+    return (stack_a);
 }
 
 /**
@@ -40,9 +40,15 @@ t_stack *push_a(t_stack *stack_a, t_stack *stack_b)
 t_stack *rotate_a(t_stack *stack_a)
 {
     int     stay;
-    t_stack nextnbr;
+    t_stack *nextnbr;
 
     if (len_list(stack_a) == 1)
         return (stack_a);
-
+    stay = stack_a->nbr;
+    nextnbr = stack_a->next;
+    ft_stack_back(nextnbr , stay);
+    stack_a = del_nbr_head(stack_a)
+    ft_putstr("RA\n");
+    return (nextnbr);
 }
+
