@@ -33,9 +33,9 @@ void	ft_putstr(char *s)
  * @param a 
  * @param b 
  */
-void	ft_swap(long *a, long *b)
+void	ft_swap(int *a, int *b)
 {
-	long	c;
+	int	c;
 
 	c = *a;
 	*a = *b;

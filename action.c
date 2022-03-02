@@ -9,7 +9,7 @@
 t_stack *swap_a(t_stack *stack_a)
 {
     if (stack_a->nbr && stack_a->next->nbr)
-        ft_swap(&(stack_a->nbr), &(stack_a->next->nbr));
+        ft_swap( &(stack_a->nbr), &(stack_a->next->nbr));
     ft_putstr("SA\n");
     return (stack_a);
 }
@@ -47,7 +47,7 @@ t_stack *rotate_a(t_stack *stack_a)
     stay = stack_a->nbr;
     nextnbr = stack_a->next;
     ft_stack_back(nextnbr , stay);
-    stack_a = del_nbr_head(stack_a)
+    stack_a = del_nbr_head(stack_a);
     ft_putstr("RA\n");
     return (nextnbr);
 }
