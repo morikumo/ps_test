@@ -25,7 +25,7 @@ t_stack	*new_element(int nbr)
  * @param data 
  * @return t_stack* 
  */
-t_stack	*ft_stack_push_front(t_stack *start, int data)
+t_stack	*ft_stack_front(t_stack *start, int data)
 {
 	t_stack	*push;
 
@@ -37,5 +37,6 @@ t_stack	*ft_stack_push_front(t_stack *start, int data)
 	}
 	return (push);
 }
+
 
 
