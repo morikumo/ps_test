@@ -15,7 +15,7 @@ t_stack *swap_a(t_stack *stack_a)
 }
 
 /**
- * @brief va 
+ * @brief Va push dans la stack_a en haut de la stack
  * 
  * @param stack_a 
  * @param stack_b 
@@ -23,5 +23,8 @@ t_stack *swap_a(t_stack *stack_a)
  */
 t_stack *push_a(t_stack *stack_a, t_stack *stack_b)
 {
-    if(new_element())
+    if (!stack_a)
+        stack_a = new_element(stack_b->nbr);
+    else
+        stack_a = 
 }
