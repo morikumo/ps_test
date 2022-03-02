@@ -9,7 +9,7 @@
 t_stack *swap_a(t_stack *stack_a)
 {
     if (stack_a->nbr && stack_a->next->nbr)
-        ft_swap( &(stack_a->nbr), &(stack_a->next->nbr));
+        ft_swap(&(stack_a->nbr), &(stack_a->next->nbr));
     ft_putstr("SA\n");
     return (stack_a);
 }

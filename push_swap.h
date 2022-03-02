@@ -19,7 +19,7 @@ typedef struct s_stack
 
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
-void	ft_swap(int *a, int *b);
+void	ft_swap(long *a, long *b);
 int     len_list(t_stack *stack_a);
 
 /*----------------------------------------------------------------------*/
