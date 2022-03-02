@@ -81,3 +81,16 @@ t_stack	*del_nbr_head(t_stack *stack_a)
 		return (NULL);
 	}
 }
+
+/**
+ * @brief Va retourner le dernier element de la liste.
+ * 
+ * @param lst 
+ * @return t_stack* 
+ */
+t_stack	*ft_lstlast(t_stack *lst)
+{
+	while (lst && lst->next != NULL)
+		lst = lst->next;
+	return (lst);
+}

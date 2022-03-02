@@ -52,3 +52,26 @@ t_stack *rotate_a(t_stack *stack_a)
     return (nextnbr);
 }
 
+/**
+ * @brief C'est un reverse de rotate_a. Il fait la meme chose a l'envers soit le dernier nombre de la pile devient le premier. 
+ * 
+ * @param stack_a 
+ * @return t_stack* 
+ */
+t_stack *rrotate_a(t_stack *stack_a)
+{
+    t_stack *last;
+    t_stack *avant_last;
+
+    avant_last = stack_a;
+    last = ft_lstlast(stack_a);
+    if (len_list(stack_a) == 1)
+        return (stack_a);
+    else
+        while (avant_last->next->next)
+            avant_last = avant_last->next;
+    last->next = stack_a;
+    avant_last->next = NULL;
+    ft_putstr("RRA\n");
+    return(last);    
+}

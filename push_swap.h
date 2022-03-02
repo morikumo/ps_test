@@ -29,7 +29,8 @@ int     len_list(t_stack *stack_a);
 t_stack     *new_element(int nbr);
 t_stack     *ft_stack_front(t_stack *start, int data);
 t_stack     *ft_stack_back(t_stack *stack_a, int nbr);
-t_stack	*del_nbr_head(t_stack *stack_a);
+t_stack	    *del_nbr_head(t_stack *stack_a);
+t_stack	    *ft_lstlast(t_stack *lst);
 
 /*----------------------------------------------------------------------*/
 
@@ -38,6 +39,7 @@ t_stack	*del_nbr_head(t_stack *stack_a);
 t_stack     *swap_a(t_stack *stack_a);
 t_stack     *push_a(t_stack *stack_a, t_stack *stack_b);
 t_stack     *rotate_a(t_stack *stack_a);
+t_stack     *rrotate_a(t_stack *stack_a);
 
 /*----------------------------------------------------------------------*/
 
