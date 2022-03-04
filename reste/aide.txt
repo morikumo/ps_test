@@ -1,0 +1,44 @@
+int *tbl;
+
+tbl = malloc(sizeof(int) * 20);
+tbl[0] = 20
+tbl[1] = 100
+tbl[2] = -2
+tbl[3] = -10
+
+// SA
+int temp;
+
+temp = tbl[0];
+tbl[0] = tbl[1];
+tbl[1] = temp;
+
+// PA
+tbl[0] = 200
+tbl[1] = 20
+tbl[2] = 100
+tbl[3] = -2
+tbl[4] = -10
+
+i = 0;
+while (i < size)
+        tbl[i + 1] = tbl[i]
+        i++;
+tbl[0] = 200
+
+//RA
+void    stack_rotate(int *tbl)
+{
+tbl[0] = -10
+tbl[1] = 200
+tbl[2] = 20
+tbl[3] = 100
+tbl[4] = -2
+
+
+tbl[0] = tbl[size];
+}
+// RR
+stack_rr()
+stack_rotate(a)
+stack_rotate(b)
