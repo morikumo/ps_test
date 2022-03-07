@@ -10,7 +10,7 @@ t_stack *swap_a(t_stack *stack_a)
 {
     if (stack_a->nbr && stack_a->next->nbr)
         ft_swap(&(stack_a->nbr), &(stack_a->next->nbr));
-    ft_putstr("SA\n");
+    ft_putstr("sa\n");
     return (stack_a);
 }
 
@@ -27,7 +27,7 @@ t_stack *push_a(t_stack *stack_a, t_stack *stack_b)
         stack_a = new_element(stack_b->nbr);
     else
         stack_a = ft_stack_front(stack_a, stack_b->nbr);
-    ft_putstr("PA\n");
+    ft_putstr("pa\n");
     return (stack_a);
 }
 
@@ -48,7 +48,7 @@ t_stack *rotate_a(t_stack *stack_a)
     nextnbr = stack_a->next;
     ft_stack_back(nextnbr , stay);
     stack_a = del_nbr_head(stack_a);
-    ft_putstr("RA\n");
+    ft_putstr("ra\n");
     return (nextnbr);
 }
 
@@ -72,6 +72,6 @@ t_stack *rrotate_a(t_stack *stack_a)
             avant_last = avant_last->next;
     last->next = stack_a;
     avant_last->next = NULL;
-    ft_putstr("RRA\n");
+    ft_putstr("rra\n");
     return(last);    
 }

@@ -44,6 +44,9 @@ t_stack     *swap_b(t_stack *stack_b);
 t_stack     *push_b(t_stack *stack_b, t_stack *stack_a);
 t_stack     *rotate_b(t_stack *stack_b);
 t_stack     *rrotate_b(t_stack *stack_b);
+t_stack *swap_a_b(t_stack *stack_a_b);
+t_stack *rotate_a_b(t_stack *stack_a_b);
+t_stack *rrotate_a_b(t_stack *stack_a_b);
 
 /*----------------------------------------------------------------------*/
 
