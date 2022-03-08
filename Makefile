@@ -1,4 +1,6 @@
-SRCS		= ./srcs/* \
+SRCS		= 	./srcs/action_stack_a_b.c ./srcs/action_stack_a.c \
+				./srcs/action_stack_b.c ./srcs/ft-manual-tri.c \
+				./srcs/utils_action.c ./srcs/utils_libft.c \
 
 OBJS			= $(SRCS:.c=.o)
 
