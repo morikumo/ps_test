@@ -1,13 +1,4 @@
 #include "push_swap.h"
-/**
- * @brief Je dois vraiment faire une description de cette fonction ?
- * 
- * @param c 
- */
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 /**
  * @brief Le bon vieux putstr, j'aurai tout de meme preferer printf
@@ -59,4 +50,35 @@ int	len_list(t_stack *stack_a)
 		stack_a = stack_a->next;
 	}
 	return (i);
+}
+/**
+ * @brief Un atoi pour les long. Va nous permettre de prendre en compte les chiffre plus grand que INT_MAX et INT_MIN.
+ * 
+ * @param str 
+ * @return long 
+ */
+long	ft_atol(const char *str)
+{
+	int		i;
+	int		negatif;
+	long	resultat;
+
+	i = 0;
+	negatif = 1;
+	resultat = 0;
+	while (str[i] == '\f' || str[i] == '\t' || str[i] == '\v'
+		|| str[i] == '\n' || str[i] == '\r' || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			negatif = negatif * (-1);
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		resultat = resultat * 10 + str[i] - 48;
+		i++;
+	}
+	return (resultat * negatif);
 }
