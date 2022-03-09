@@ -15,7 +15,7 @@ t_stack *swap_a(t_stack *stack_a)
 }
 
 /**
- * @brief Va chercher dans la stack_b en haut, pour la placer de la stack_a en haut
+ * @brief Va chercher dans la stack_b en haut, pour la placer de la stack_a en haut. Toujours utiliser del_nbr_head apres un push.
  * 
  * @param stack_a 
  * @param stack_b 
