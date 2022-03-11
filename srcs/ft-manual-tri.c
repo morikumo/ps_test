@@ -39,3 +39,7 @@ t_stack *tri_for_3(t_stack *stack_a)
     return (stack_a);
 }
 
+t_stack tri_for_5(t_stack *stack_a, t_stack *stack_b)
+{
+    
+}

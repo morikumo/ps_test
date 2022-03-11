@@ -29,6 +29,7 @@ t_stack	*ft_stack_front(t_stack *start, int data)
 {
 	t_stack	*push;
 
+	push = NULL;
 	if (start)
 	{
 		push = new_element(data);
