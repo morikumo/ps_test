@@ -10,7 +10,8 @@ t_stack *tri_for_2(t_stack *stack_a)
 {
     if (stack_a->nbr > stack_a->next->nbr)
         stack_a = swap_a(stack_a);
-    return (stack_a);
+    else
+        return (stack_a);
 }
 
 /**

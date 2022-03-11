@@ -15,7 +15,7 @@ typedef struct s_stack
 
 /*----------------------------------------------------------------------*/
 
-/*------------------------- FONCTION UTILS DE LA LIBFT -----------------------*/
+/*---------------------- FONCTION UTILS DE LA LIBFT --------------------*/
 
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
@@ -24,7 +24,7 @@ int     len_list(t_stack *stack_a);
 
 /*----------------------------------------------------------------------*/
 
-/*--------------------------- FONCTION UTILS DES ACTION --------------------------*/
+/*---------------------- FONCTION UTILS DES ACTION ---------------------*/
 
 t_stack     *new_element(int nbr);
 t_stack     *ft_stack_front(t_stack *start, int data);
@@ -44,11 +44,11 @@ t_stack     *swap_b(t_stack *stack_b);
 t_stack     *push_b(t_stack *stack_b, t_stack *stack_a);
 t_stack     *rotate_b(t_stack *stack_b);
 t_stack     *rrotate_b(t_stack *stack_b);
-t_stack *swap_a_b(t_stack *stack_a_b);
-t_stack *rotate_a_b(t_stack *stack_a_b);
-t_stack *rrotate_a_b(t_stack *stack_a_b);
-t_stack *tri_for_2(t_stack *stack_a);
-t_stack *tri_for_3(t_stack *stack_a);
+t_stack     *swap_a_b(t_stack *stack_a_b);
+t_stack     *rotate_a_b(t_stack *stack_a_b);
+t_stack     *rrotate_a_b(t_stack *stack_a_b);
+t_stack     *tri_for_2(t_stack *stack_a);
+t_stack     *tri_for_3(t_stack *stack_a);
 
 /*----------------------------------------------------------------------*/
 
