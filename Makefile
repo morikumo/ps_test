@@ -19,7 +19,7 @@ AR				= ar rcs
 
 $(NAME):		$(OBJS)
 				@$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -L.
-				@echo -ne '                            (0%)\r'
+				@echo -ne '\033[32m                            (0%)\r'
 				@sleep 1
 				@echo -ne '#####                      (33%)\r'
 				@sleep 1
@@ -27,13 +27,13 @@ $(NAME):		$(OBJS)
 				@sleep 1
 				@echo -ne '#######################   (100%)\r'
 				@echo -ne '\n'
-				@echo "C'est compilé !"
+				@echo "\033[33mC'est compilé !"
 
 all:			$(NAME)
 
 clean:
 				@$(RM) $(OBJS)
-				@echo -ne '#######################   (100%)\r'
+				@echo -ne '\033[36m#######################   (100%)\r'
 				@sleep 1
 				@echo -ne '#############              (66%)\r'
 				@sleep 1
@@ -41,11 +41,11 @@ clean:
 				@sleep 1
 				@echo -ne '                            (0%)\r'
 				@echo -ne '\n'
-				@echo "C'est clean !"
+				@echo "\033[33mC'est clean !"
 
 fclean:			clean
 				@$(RM) $(NAME) 
-				@echo -ne '#######################   (100%)\r'
+				@echo -ne '\033[34m#######################   (100%)\r'
 				@sleep 1
 				@echo -ne '#############              (66%)\r'
 				@sleep 1
@@ -53,10 +53,10 @@ fclean:			clean
 				@sleep 1
 				@echo -ne '                            (0%)\r'
 				@echo -ne '\n'
-				@echo "C'est fclean !"
+				@echo "\033[33mC'est fclean !"
 
 re:				fclean all
-				@echo -ne '#######################   (100%)\r'
+				@echo -ne '\033[34m#######################   (100%)\r'
 				@sleep 1
 				@echo -ne '#############              (66%)\r'
 				@sleep 1
@@ -64,8 +64,8 @@ re:				fclean all
 				@sleep 1
 				@echo -ne '                            (0%)\r'
 				@echo -ne '\n'
-				@echo "C'est fclean !"
-				@echo -ne '                            (0%)\r'
+				@echo "\033[33mC'est fclean !"
+				@echo -ne '\033[32m                            (0%)\r'
 				@sleep 1
 				@echo -ne '#####                      (33%)\r'
 				@sleep 1
@@ -73,6 +73,6 @@ re:				fclean all
 				@sleep 1
 				@echo -ne '#######################   (100%)\r'
 				@echo -ne '\n'
-				@echo "C'est compilé !"
+				@echo "\033[33mC'est compilé !"
 
 .PHONY:			all clean fclean c.o re
