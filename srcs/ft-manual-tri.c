@@ -1,7 +1,8 @@
 #include "push_swap.h"
 
 /**
- * @brief Cas manuel pour le cas ou il y a 2 elements dans la stack. Si le 1er element est plus grand que le second on swap sinon on retourne directement stack_a.
+ * @brief Tri manuel pour 5 element.
+ *  Si le 1er element est plus grand que le second on swap sinon on retourne directement stack_a.
  * 
  * @param stack_a 
  * @return t_stack* 
@@ -15,7 +16,8 @@ t_stack *tri_for_2(t_stack *stack_a)
 }
 
 /**
- * @brief Tri manuel pour 3 elements. Si le 1er elements est plus grand que le second, et que le 3eme elements est plus grand que le 1er, on fait un swap des 2 premiers elements.
+ * @brief Tri manuel pour 3 elements. 
+ * Si le 1er elements est plus grand que le second, et que le 3eme elements est plus grand que le 1er, on fait un swap des 2 premiers elements.
  * Si le 1er elements est plus grand que le second et que le second element est plus grand que le 3eme.
  * On fait un swap des 2 premier elements et on fait un reverse rotate, soit le dernier element devient le premier.
  * 
@@ -40,7 +42,28 @@ t_stack *tri_for_3(t_stack *stack_a)
     return (stack_a);
 }
 
-t_stack tri_for_5(t_stack *stack_a, t_stack *stack_b)
+/**
+ * @brief Tri manuel pour 5 element
+ * Plus petit en stack b, puis plus grand en stack b, tri pour 3 on mets le plus grand en stack a, puis rotate a pour que le plus grand finisse dernier
+ * puis push_a,et tout est dans l'ordre.
+ * 
+ * @param stack_a 
+ * @param stack_b 
+ * @return t_stack* 
+ */
+t_stack *tri_for_5(t_stack *stack_a, t_stack *stack_b)
 {
-    
+    stack_a = min_up_list(stack_a);
+	stack_b = push_b(stack_a, stack_b);
+	stack_a = del_nbr_head(stack_a);
+	stack_a = max_up_list(stack_a);
+	stack_b = push_b(stack_a, stack_b);
+	stack_a = del_nbr_head(stack_a);
+	stack_a = tri_for_3(stack_a);
+	stack_a = push_a(stack_a, stack_b);
+	stack_b = del_nbr_head(stack_b);
+	stack_a = rotate_a(stack_a);
+	stack_a = push_a(stack_a, stack_b);
+	stack_b = del_nbr_head(stack_b);
+	return (stack_a);
 }
