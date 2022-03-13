@@ -17,7 +17,8 @@ t_stack *tri_for_2(t_stack *stack_a)
 
 /**
  * @brief Tri manuel pour 3 elements. 
- * Si le 1er elements est plus grand que le second, et que le 3eme elements est plus grand que le 1er, on fait un swap des 2 premiers elements.
+ * Si le 1er elements est plus grand que le second, et que le 3eme elements est plus grand que le 1er,
+ * on fait un swap des 2 premiers elements.
  * Si le 1er elements est plus grand que le second et que le second element est plus grand que le 3eme.
  * On fait un swap des 2 premier elements et on fait un reverse rotate, soit le dernier element devient le premier.
  * 
@@ -44,7 +45,8 @@ t_stack *tri_for_3(t_stack *stack_a)
 
 /**
  * @brief Tri manuel pour 5 element
- * Plus petit en stack b, puis plus grand en stack b, tri pour 3 on mets le plus grand en stack a, puis rotate a pour que le plus grand finisse dernier
+ * Plus petit en stack b, puis plus grand en stack b, tri pour 3 on mets le plus grand en stack a, 
+ * puis rotate a pour que le plus grand finisse dernier
  * puis push_a,et tout est dans l'ordre.
  * 
  * @param stack_a 
