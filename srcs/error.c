@@ -88,3 +88,21 @@ void	check_doublon(t_stack *stack_a)
 		two = two->next;
 	}
 }
+
+/**
+ * @brief Vérifie si le prochain nbr existe bien et si il est inférieur au précedent.
+ * 
+ * @param stack_a 
+ * @return int 
+ */
+int	check_next(t_stack *stack_a)
+{
+	while (stack_a->next)
+	{
+		if (stack_a->nbr < stack_a->next->nbr && stack_a->next != NULL)
+			stack_a = stack_a->next;
+		else
+			return (0);
+	}
+	return (1);
+}

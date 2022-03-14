@@ -17,11 +17,11 @@ typedef struct s_stack
 
 /*---------------------- FONCTION UTILS DE LA LIBFT --------------------*/
 
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_swap(long *a, long *b);
-int     len_list(t_stack *stack_a);
-long	ft_atol(const char *str);
+void	    ft_putstr(char *s);
+void	    ft_swap(long *a, long *b);
+int         len_list(t_stack *stack_a);
+long	    ft_atol(const char *str);
+char	    **ft_split(char	const *s, char c);
 
 /*----------------------------------------------------------------------*/
 
@@ -32,6 +32,7 @@ t_stack     *ft_stack_front(t_stack *start, int data);
 t_stack     *ft_stack_back(t_stack *stack_a, int nbr);
 t_stack	    *del_nbr_head(t_stack *stack_a);
 t_stack	    *ft_lstlast(t_stack *lst);
+t_stack	    *free_stack(t_stack *stack_a);
 
 /*----------------------------------------------------------------------*/
 
@@ -53,20 +54,43 @@ t_stack     *rrotate_a_b(t_stack *stack_a_b);
 
 /*----------------------------- FONCTION TRI ---------------------------*/
 
+int         max_pos(t_stack *stack_a);
+int	        min_pos(t_stack *stack_a);
 t_stack     *tri_for_2(t_stack *stack_a);
 t_stack     *tri_for_3(t_stack *stack_a);
 t_stack     *tri_for_5(t_stack *stack_a, t_stack *stack_b);
 t_stack     *min_up_list(t_stack *stack_a);
 t_stack     *max_up_list(t_stack *stack_a);
-int	        min_pos(t_stack *stack_a);
-int         max_pos(t_stack *stack_a);
 
 /*----------------------------------------------------------------------*/
 
 /*---------------------------- FONCTION ERREUR -------------------------*/
 
-int     ft_isdigit(char s);
-int     ft_white_space(char c);
+int         ft_isdigit(char s);
+int         ft_white_space(char c);
+void	    check_str(char *str);
+void	    check_doublon(t_stack *stack_a);
+int	        check_next(t_stack *stack_a);
+
+/*----------------------------------------------------------------------*/
+
+
+/*----------------------------- FONCTION ALGO --------------------------*/
+
+int	        *tab_int(t_stack *stack_a, int size);
+void	    free_str(char **tab);
+int	        *value_pos(int *tab, int len);
+t_stack	    *max_up_list_stack_b(t_stack *stack_b, int posmax, int size);
+t_stack	    *max_stack_b_push_a(t_stack *stack_a, t_stack *stack_b);
+int	        get_group(t_stack *stack, int *tab, int size);
+t_stack	    *push_by_group(t_stack *stack_a, t_stack *stack_b, int size);
+
+/*----------------------------------------------------------------------*/
+
+/*--------------------------- FONCTION PARSING -------------------------*/
+
+t_stack	    *new_element_tab(char **av);
+t_stack	    *init(char **av);
 
 /*----------------------------------------------------------------------*/
 
