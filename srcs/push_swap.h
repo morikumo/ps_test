@@ -58,6 +58,7 @@ int         max_pos(t_stack *stack_a);
 int	        min_pos(t_stack *stack_a);
 t_stack     *tri_for_2(t_stack *stack_a);
 t_stack     *tri_for_3(t_stack *stack_a);
+t_stack     *tri_3_plus_de_25_lignes(t_stack *stack_a);
 t_stack     *tri_for_5(t_stack *stack_a, t_stack *stack_b);
 t_stack     *min_up_list(t_stack *stack_a);
 t_stack     *max_up_list(t_stack *stack_a);

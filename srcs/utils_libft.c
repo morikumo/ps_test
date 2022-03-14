@@ -66,7 +66,8 @@ long	ft_atol(const char *str)
 	i = 0;
 	negatif = 1;
 	resultat = 0;
-	while (ft_white_space(str[i]))
+	while (str[i] == '\f' || str[i] == '\t' || str[i] == '\v'
+		|| str[i] == '\n' || str[i] == '\r' || str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -74,7 +75,7 @@ long	ft_atol(const char *str)
 			negatif = negatif * (-1);
 		i++;
 	}
-	while (ft_isdigit(str[i]))
+	while (str[i] >= '0' && str[i] <= '9')
 	{
 		resultat = resultat * 10 + str[i] - 48;
 		i++;

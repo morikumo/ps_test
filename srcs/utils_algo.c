@@ -20,7 +20,7 @@ int	*tab_int(t_stack *stack_a, int size)
 	while (i < size)
 	{
 		tab[i] = stack_a->nbr;
-
+		i++;
 		stack_a = stack_a->next;
 	}
 	return (tab);

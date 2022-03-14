@@ -17,10 +17,10 @@ CC				= gcc
 AR				= ar rcs
 
 .c.o:
-				@$(CC) $(CFLAGS) $(SRCS) $< -o $(<:.c=.o)
+				@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) 
 
 $(NAME):		$(OBJS)
-				@$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -L.
+				@$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -L. -g
 				@echo -ne '\033[32m                            (0%)\r'
 				@sleep 1
 				@echo -ne '#####                      (33%)\r'
@@ -58,23 +58,5 @@ fclean:			clean
 				@echo "\033[33mC'est fclean !"
 
 re:				fclean all
-				@echo -ne '\033[34m#######################   (100%)\r'
-				@sleep 1
-				@echo -ne '#############              (66%)\r'
-				@sleep 1
-				@echo -ne '#####                      (33%)\r'
-				@sleep 1
-				@echo -ne '                            (0%)\r'
-				@echo -ne '\n'
-				@echo "\033[33mC'est fclean !"
-				@echo -ne '\033[32m                            (0%)\r'
-				@sleep 1
-				@echo -ne '#####                      (33%)\r'
-				@sleep 1
-				@echo -ne '#############              (66%)\r'
-				@sleep 1
-				@echo -ne '#######################   (100%)\r'
-				@echo -ne '\n'
-				@echo "\033[33mC'est compilé !"
 
 .PHONY:			all clean fclean c.o re

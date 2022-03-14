@@ -49,7 +49,10 @@ t_stack	*init(char **av)
 	if (stack_a)
 	{
 		if (check_next(stack_a) == 1)
-			exit(1);
+			{
+				ft_putstr("Error only 1 av\n");
+				exit(1);
+			}
 		check_doublon(stack_a);
 	}
 	return (stack_a);

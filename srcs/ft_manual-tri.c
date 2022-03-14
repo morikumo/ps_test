@@ -15,6 +15,37 @@ t_stack *tri_for_2(t_stack *stack_a)
 }
 
 /**
+ * @brief C'est la suite de tri_for_3 ...
+ * 
+ * @param stack_a 
+ * @return t_stack* 
+ */
+t_stack *tri_3_plus_de_25_lignes(t_stack *stack_a)
+{
+	if (stack_a->nbr > stack_a->next->nbr
+		&& stack_a->next->nbr < stack_a->next->next->nbr)
+	{
+		stack_a = rotate_a(stack_a);
+		return (stack_a);
+	}
+	else if (stack_a->nbr < stack_a->next->nbr
+		&& stack_a->nbr < stack_a->next->next->nbr
+		&&stack_a->next->nbr > stack_a->next->next->nbr)
+	{
+		stack_a = swap_a(stack_a);
+		stack_a = rotate_a(stack_a);
+		return (stack_a);
+	}
+	else if (stack_a->nbr < stack_a->next->nbr
+		&& stack_a->next->nbr > stack_a->next->next->nbr)
+	{
+		stack_a = rrotate_a(stack_a);
+		return (stack_a);
+	}
+	return (stack_a);
+}
+
+/**
  * @brief Tri manuel pour 3 elements. 
  * Si le 1er elements est plus grand que le second, et que le 3eme elements est plus grand que le 1er,
  * on fait un swap des 2 premiers elements.
@@ -39,8 +70,10 @@ t_stack *tri_for_3(t_stack *stack_a)
         stack_a = rrotate_a(stack_a);
         return (stack_a);
     }
+    stack_a = tri_3_plus_de_25_lignes(stack_a);
     return (stack_a);
 }
+
 
 /**
  * @brief Tri manuel pour 5 element
