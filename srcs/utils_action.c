@@ -11,8 +11,6 @@ t_stack	*new_element(int nbr)
 	t_stack	*element;
 
 	element = malloc(sizeof(t_stack));
-	//if (!element)
-    //    return (NULL);
 	element->nbr = nbr;
 	element->next = NULL;
 	return (element);
@@ -29,7 +27,6 @@ t_stack	*ft_stack_front(t_stack *start, int data)
 {
 	t_stack	*push;
 
-	push = NULL;
 	if (start)
 	{
 		push = new_element(data);

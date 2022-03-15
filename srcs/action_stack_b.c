@@ -21,7 +21,7 @@ t_stack *swap_b(t_stack *stack_b)
  * @param stack_a 
  * @return t_stack* 
  */
-t_stack *push_b(t_stack *stack_b, t_stack *stack_a)
+t_stack *push_b(t_stack *stack_a, t_stack *stack_b)
 {
     if (!stack_b)
         stack_b = new_element(stack_a->nbr);
