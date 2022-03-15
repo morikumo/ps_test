@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabid <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/15 16:05:52 by mabid             #+#    #+#             */
+/*   Updated: 2022/03/15 16:08:26 by mabid            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack	*free_stack(t_stack *stack_a)
@@ -13,11 +25,11 @@ t_stack	*free_stack(t_stack *stack_a)
 	return (stack_a);
 }
 
-int main (int ac, char **av)
+int	main(int ac, char **av)
 {
-    t_stack	*stack_a;
-	t_stack	*stack_b;
-	int		size;
+	t_stack		*stack_a;
+	t_stack		*stack_b;
+	int			size;
 
 	stack_a = NULL;
 	stack_b = NULL;

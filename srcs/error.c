@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabid <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/15 15:51:51 by mabid             #+#    #+#             */
+/*   Updated: 2022/03/15 15:53:51 by mabid            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /**
@@ -30,7 +42,8 @@ int	ft_white_space(char c)
 }
 
 /**
- * @brief Verifie si l'argument passé au programme est bon. Avec comme limites INT_MIN et INT_MAX.
+ * @brief Verifie si l'argument passé au programme est bon. 
+ * Avec comme limites INT_MIN et INT_MAX.
  * 
  * @param str 
  */
@@ -48,7 +61,8 @@ void	check_str(char *str)
 			ft_putstr("Error av too large\n");
 			exit(1);
 		}
-		if (ft_isdigit(str[i]) == 1 && ft_white_space(str[i]) && str[i] != '-')
+		if (ft_isdigit(str[i]) == 1
+			&& ft_white_space(str[i]) && str[i] != '-')
 		{
 			ft_putstr("Error av arn't a correct one\n");
 			exit(1);
@@ -58,7 +72,8 @@ void	check_str(char *str)
 }
 
 /**
- * @brief Va verifier les doublons a travers la liste en passant par les elements donner.
+ * @brief Va verifier les doublons a travers la liste 
+ * en passant par les elements donner.
  * 
  * @param stack_a 
  */
@@ -90,7 +105,8 @@ void	check_doublon(t_stack *stack_a)
 }
 
 /**
- * @brief Vérifie si le prochain nbr existe bien et si il est inférieur au précedent.
+ * @brief Vérifie si le prochain nbr existe bien 
+ * et si il est inférieur au précedent.
  * 
  * @param stack_a 
  * @return int 
