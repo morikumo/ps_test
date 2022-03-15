@@ -27,7 +27,7 @@ t_stack *push_b(t_stack *stack_a, t_stack *stack_b)
         stack_b = new_element(stack_a->nbr);
     else
         stack_b = ft_stack_front(stack_b, stack_a->nbr);
-    ft_putstr("sb\n");
+    ft_putstr("pb\n");
     return (stack_b);
 }
 
