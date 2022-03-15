@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_action.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabid <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/15 16:56:57 by mabid             #+#    #+#             */
+/*   Updated: 2022/03/15 16:58:49 by mabid            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /**
- * @brief Va creer un nouveau element a la liste. Equivalent de lstnew dans libft.
+ * @brief Va creer un nouveau element a la liste. 
+ * Equivalent de lstnew dans libft.
  * 
  * @param nbr 
  * @return t_stack* 
@@ -17,7 +30,8 @@ t_stack	*new_element(int nbr)
 }
 
 /**
- * @brief Va creer un element et le donner à push pour faire un echange. Equivalent de lstadd_front.
+ * @brief Va creer un element et le donner à push pour faire un echange. 
+ * Equivalent de lstadd_front.
  * 
  * @param start 
  * @param data 
@@ -38,7 +52,9 @@ t_stack	*ft_stack_front(t_stack *start, int data)
 }
 
 /**
- * @brief Va parcourir la liste et juste avant le dernier element qui pointe sur null on va ajouter un maillont. Ici nbr. Equivalent de lstadd_back un peu remixer quand meme.
+ * @brief Va parcourir la liste et juste avant le dernier element 
+ * qui pointe sur null on va ajouter un maillont. Ici nbr. 
+ * Equivalent de lstadd_back un peu remixer quand meme.
  * 
  * @param stack_a 
  * @param nbr 
@@ -58,9 +74,9 @@ t_stack	*ft_stack_back(t_stack *stack_a, int nbr)
 	return (list);
 }
 
-
 /**
- * @brief Va supprimer uniquement le premier element. Equivalent de lstdelone, mais uniquement pour le premier element.
+ * @brief Va supprimer uniquement le premier element. 
+ * Equivalent de lstdelone, mais uniquement pour le premier element.
  * 
  * @param stack_a 
  * @return t_stack* 

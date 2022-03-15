@@ -1,18 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_manual_tri.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabid <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/15 17:21:57 by mabid             #+#    #+#             */
+/*   Updated: 2022/03/15 17:23:40 by mabid            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /**
  * @brief Ici stock aura la valeur du plus grand nombre. 
- * On va mettre i a la position dans la liste pour identifier le nombre en question.
+ * On va mettre i a la position dans la liste 
+ * pour identifier le nombre en question.
  * Soit la plus grande valeur ici.
  * 
  * @param stack_a 
  * @return int 
  */
-int max_pos(t_stack *stack_a)
+int	max_pos(t_stack *stack_a)
 {
-    t_stack	*tmp;
-	int		i;
-	int		stock;
+	t_stack		*tmp;
+	int			i;
+	int			stock;
 
 	i = 1;
 	tmp = stack_a;
@@ -98,13 +111,14 @@ t_stack	*min_up_list(t_stack *stack_a)
 
 /**
  * @brief Regarde la taille de la liste, cherche le plus grand element
- * Si il n'y a que 2 element et que l'element le plus grand se trouve en haut de la pile alors on swap
+ * Si il n'y a que 2 element et 
+ * que l'element le plus grand se trouve en haut de la pile alors on swap
  * Sinon on fait rrotate jusqu(a arrivé a l'element le plus grand
  * 
  * @param stack_a 
  * @return t_stack 
  */
-t_stack *max_up_list(t_stack *stack_a)
+t_stack	*max_up_list(t_stack *stack_a)
 {
 	int	max;
 	int	len;

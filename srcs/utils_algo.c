@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_algo.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabid <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/15 16:58:58 by mabid             #+#    #+#             */
+/*   Updated: 2022/03/15 17:18:47 by mabid            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /**
- * @brief Va créer un tableau de int avec malloc et metre dans le tableeau le nombre d'element de la liste.
+ * @brief Va créer un tableau de int avec malloc 
+ * et metre dans le tableeau le nombre d'element de la liste.
  * on malloc size +1 en general pour le \0 ici se sera pour la valeur NULL.
  * 
  * @param stack_a 
@@ -45,7 +58,9 @@ void	free_str(char **tab)
 }
 
 /**
- * @brief Va nous indiquer les positions de chaque element que l'on met dans la liste, dans le tableau.
+ * @brief 
+ * Va nous indiquer les positions de chaque element que l'on met dans la liste,
+ * dans le tableau.
  * 
  * @param tab 
  * @param len 
@@ -74,7 +89,8 @@ int	*value_pos(int *tab, int len)
 }
 
 /**
- * @brief Ici on va partir a la recherche de la position de l'element le plus grand.
+ * @brief Ici on va partir a la recherche de la position de
+ * l'element le plus grand.
  * Et le placer en tete de liste.
  * 
  * @param stack_b 
@@ -104,8 +120,10 @@ t_stack	*max_up_list_stack_b(t_stack *stack_b, int posmax, int size)
 }
 
 /**
- * @brief Dernière étape de la stack_b, soit tout remetre a la stack_a en triant.
- * La plus grande valeur en tete pour qu'elle arrive en bas de pile dans la stack_a lorsque l'on push.
+ * @brief Dernière étape de la stack_b, 
+ * soit tout remetre a la stack_a en triant.
+ * La plus grande valeur en tete pour 
+ * qu'elle arrive en bas de pile dans la stack_a lorsque l'on push.
  * Ce qui fera un tri correct.
  * 
  * @param stack_a 

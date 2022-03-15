@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_libft.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabid <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/15 17:19:19 by mabid             #+#    #+#             */
+/*   Updated: 2022/03/15 17:21:48 by mabid            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /**
@@ -18,6 +30,7 @@ void	ft_putstr(char *s)
 		i++;
 	}
 }
+
 /**
  * @brief Un simple swap
  * 
@@ -51,8 +64,11 @@ int	len_list(t_stack *stack_a)
 	}
 	return (i);
 }
+
 /**
- * @brief Un atoi pour les long. Va nous permettre de prendre en compte les chiffre plus grand que INT_MAX et INT_MIN.
+ * @brief Un atoi pour les long. 
+ * Va nous permettre de prendre en compte 
+ * les chiffre plus grand que INT_MAX et INT_MIN.
  * 
  * @param str 
  * @return long 

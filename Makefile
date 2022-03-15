@@ -59,8 +59,8 @@ fclean:			clean
 
 re:				fclean all
 
-normin: 		norminette ./srcs/*
+normin: 		norminette ./srcs
 
-wnormin : 		watch norminette ./srcs/*
+wnormin : 		watch norminette ./srcs
 
 .PHONY:			all clean fclean c.o re
