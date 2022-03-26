@@ -76,3 +76,37 @@ void	visualise_list(t_stack *la, t_stack *lb)
 	}
 	ft_putstr_fd("|_______________|_______________|\n", 1);
 }
+
+int ft_num(char c)
+{
+    if(c >='0' && c <= '9')
+        return(1);
+    return(0);
+}
+
+void    *ft_ato(char *str)
+{
+    int    i;
+    long int    a;
+    long int    b;
+
+    i = -1;
+    a = 1;
+    b = 0;
+    if(!str)
+        return(printf("gfge"),(void *)'c');
+    while (str[++i])
+    {
+        if(!((ft_num(str[i]) == 1) || (str[i] == '-') || (str[i] == ' ')))
+            return(printf("ytr"), (void *)'c');
+        else if(str[i] == '-' && (!(ft_num(str[i + 1]) == 1) || (ft_num(str[i - 1]) == 1)))
+            return(printf("kbverbg \n"), (void *)'c');
+        else if(str[i] == '-')
+            a = -a;
+        if(ft_num(str[i]) == 1)
+            b = b * 10 + str[i] - 48;
+    }
+    if(((a * b) > (2147483647)) || ((a * b) < (-2147483648)) )
+        return(printf("hjktg \n"),(void *)'c');
+    return (((void *)(a * b)));
+}

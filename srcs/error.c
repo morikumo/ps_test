@@ -21,9 +21,8 @@
 int	ft_isdigit(char c)
 {
 	if (c >= '0' && c <= '9')
-		return (0);
-	else
 		return (1);
+	return (0);
 }
 
 /**
@@ -61,7 +60,7 @@ void	check_str(char *str)
 			ft_putstr("Error av too large\n");
 			exit(1);
 		}
-		if (ft_isdigit(str[i]) == 1
+		if (ft_isdigit(str[i]) == 0
 			&& ft_white_space(str[i]) && str[i] != '-')
 		{
 			ft_putstr("Error av arn't a correct one\n");
