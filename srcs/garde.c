@@ -96,3 +96,21 @@ t_stack	*push_by_group(t_stack *stack_a, t_stack *stack_b, int size)
 	stack_a = max_stack_b_push_a(stack_a, stack_b);
 	return (stack_a);
 }
+
+
+/**
+ * @brief A absolument reutiliser pour afficher ca liste.
+ * 
+ * @param start 
+ */
+void    printnode(t_stack *start)
+{
+        t_stack *temp;
+
+        temp = start;
+        while(temp)
+        {
+                printf("%ld \n", (long int)temp->nbr);
+                temp = temp->next;
+        }
+}

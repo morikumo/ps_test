@@ -6,7 +6,7 @@
 /*   By: mabid <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:03:36 by mabid             #+#    #+#             */
-/*   Updated: 2022/03/15 16:05:33 by mabid            ###   ########.fr       */
+/*   Updated: 2022/03/29 18:39:17 by mabid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,32 +19,30 @@
  * @param av 
  * @return t_stack* 
  */
-t_stack	*new_element_tab(char **av)
+t_stack	*new_element_tab(char *av)
 {
-	int		j;
-	char	**tab;
 	t_stack	*tmp;
 	t_stack	*stack_a;
+	int		j;
 
-	tab = ft_split(av[1], ' ');
 	stack_a = NULL;
-	j = 0;
-	while (tab[j])
+	j = 1;
+	while (av[j])
 	{
-		check_str(tab[j]);
+		check_str(av);
 		if (!stack_a)
 		{
-			stack_a = new_element(ft_atol(tab[j]));
+			stack_a = new_element(ft_atol(av));
 			tmp = stack_a;
 		}
 		else
 		{
-			tmp->next = new_element(ft_atol(tab[j]));
+			tmp->next = new_element(ft_atol(av));
 			tmp = tmp->next;
 		}
 		j++;
 	}
-	free_str(tab);
+	//free_str(av);
 	return (stack_a);
 }
 
@@ -54,7 +52,8 @@ t_stack	*new_element_tab(char **av)
  * @param av 
  * @return t_stack* 
  */
-t_stack	*init(char **av)
+
+t_stack	*init(char *av)
 {
 	t_stack	*stack_a;
 

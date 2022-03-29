@@ -32,7 +32,7 @@ typedef struct s_stack
 void		ft_putstr(char *s);
 void		ft_swap(long *a, long *b);
 int			len_list(t_stack *stack_a);
-long		ft_atol(const char *str);
+long		ft_atol(char *str);
 char		**ft_split(char	const *s, char c);
 
 /*----------------------------------------------------------------------*/
@@ -42,6 +42,7 @@ char		**ft_split(char	const *s, char c);
 t_stack		*new_element(int nbr);
 t_stack		*ft_stack_front(t_stack *start, int data);
 t_stack		*ft_stack_back(t_stack *stack_a, int nbr);
+t_stack	*ft_stack_back2(t_stack *stack_a,t_stack *element);
 t_stack		*del_nbr_head(t_stack *stack_a);
 t_stack		*ft_lstlast(t_stack *lst);
 t_stack		*free_stack(t_stack *stack_a);
@@ -101,8 +102,16 @@ t_stack		*push_by_group(t_stack *stack_a, t_stack *stack_b, int size);
 
 /*--------------------------- FONCTION PARSING -------------------------*/
 
-t_stack		*new_element_tab(char **av);
-t_stack		*init(char **av);
+t_stack		*new_element_tab(char *av);
+t_stack		*init(char *av);
+
+/*----------------------------------------------------------------------*/
+
+/*----------------------------- FONCTION MAIN --------------------------*/
+
+t_stack *ft_tri(int i, t_stack *stack_a, t_stack *stack_b);
+void ft_rempli(char *av, t_stack *stack_a);
+
 
 /*----------------------------------------------------------------------*/
 
